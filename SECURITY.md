@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-We take security vulnerabilities seriously. If you discover a security issue in RunicRPC, please report it responsibly.
+We take security vulnerabilities seriously. If you discover a security issue in runicRPC, please report it responsibly.
 
 ### How to Report
 
@@ -40,7 +40,7 @@ Include the following information:
 
 ## Security Best Practices
 
-When integrating with RunicRPC, follow these guidelines:
+When integrating with runicRPC, follow these guidelines:
 
 ### API Key Management
 
@@ -78,7 +78,7 @@ When integrating with RunicRPC, follow these guidelines:
 
 ### API Key Handling
 
-RunicRPC automatically masks API keys in logs and metrics output. However:
+runicRPC automatically masks API keys in logs and metrics output. However:
 
 - Keys may appear in stack traces during initialization failures
 - Ensure your logging infrastructure does not capture environment variables
