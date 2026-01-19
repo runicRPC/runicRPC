@@ -108,18 +108,10 @@ runicRPC operates as a transparent proxy layer between your application and RPC 
 
 This repository provides documentation and reference implementations for runicRPC. The core routing engine is proprietary; this repository offers transparency through comprehensive documentation and working demonstrations.
 
-```
-runic-rpc/
-├── apps/
-│   ├── docs/           # Documentation site
-│   └── demo-app/       # Reference implementation
-└── LICENSE
-```
-
-| Directory | Purpose |
+| Repository | Purpose |
 |-----------|---------|
-| `apps/docs` | Full documentation covering installation, configuration, and production deployment |
-| `apps/demo-app` | Working demonstration of runicRPC capabilities |
+| `docs` | Full documentation covering installation, configuration, and production deployment |
+| `demo-app` | Working demonstration of runicRPC capabilities |
 
 ---
 
