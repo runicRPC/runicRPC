@@ -204,7 +204,7 @@ const metrics = rpc.getPrometheusMetrics();
 
 ## Documentation
 
-Comprehensive documentation is available in the [docs](./apps/docs) directory:
+Comprehensive documentation is available in the [docs](https://github.com/runicRPC/runicrpc-docs) repository:
 
 - Installation and setup
 - Provider configuration
