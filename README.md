@@ -1,8 +1,8 @@
-# RunicRPC
+# runicRPC
 
 **Production-Grade Solana RPC Load Balancer**
 
-RunicRPC is an enterprise-grade middleware layer for Solana RPC infrastructure. It provides intelligent request routing, automatic failover, latency-aware load balancing, and comprehensive observability for applications that depend on reliable blockchain connectivity.
+runicRPC is an enterprise-grade middleware layer for Solana RPC infrastructure. It provides intelligent request routing, automatic failover, latency-aware load balancing, and comprehensive observability for applications that depend on reliable blockchain connectivity.
 
 ---
 
@@ -10,7 +10,7 @@ RunicRPC is an enterprise-grade middleware layer for Solana RPC infrastructure. 
 
 Modern Solana applications require consistent, low-latency access to RPC endpoints. Single-provider architectures introduce unacceptable risk: rate limits, regional outages, and transient failures can halt production systems without warning.
 
-RunicRPC eliminates this fragility by abstracting multiple RPC providers behind a unified, fault-tolerant interface. The system continuously monitors endpoint health, routes requests to optimal providers, and gracefully handles failures without application-level intervention.
+runicRPC eliminates this fragility by abstracting multiple RPC providers behind a unified, fault-tolerant interface. The system continuously monitors endpoint health, routes requests to optimal providers, and gracefully handles failures without application-level intervention.
 
 ### Design Principles
 
@@ -23,7 +23,7 @@ RunicRPC eliminates this fragility by abstracting multiple RPC providers behind 
 
 ## Architecture
 
-RunicRPC operates as a transparent proxy layer between your application and RPC providers. All standard Solana JSON-RPC methods and WebSocket subscriptions are supported without modification.
+runicRPC operates as a transparent proxy layer between your application and RPC providers. All standard Solana JSON-RPC methods and WebSocket subscriptions are supported without modification.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -32,7 +32,7 @@ RunicRPC operates as a transparent proxy layer between your application and RPC 
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                         RunicRPC                                 │
+│                         runicRPC                                 │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │
 │  │   Router    │  │   Circuit   │  │    Cache    │              │
 │  │  (Strategy) │  │   Breaker   │  │   (LRU)     │              │
@@ -106,7 +106,7 @@ RunicRPC operates as a transparent proxy layer between your application and RPC 
 
 ## Repository Contents
 
-This repository provides documentation and reference implementations for RunicRPC. The core routing engine is proprietary; this repository offers transparency through comprehensive documentation and working demonstrations.
+This repository provides documentation and reference implementations for runicRPC. The core routing engine is proprietary; this repository offers transparency through comprehensive documentation and working demonstrations.
 
 ```
 runic-rpc/
@@ -119,7 +119,7 @@ runic-rpc/
 | Directory | Purpose |
 |-----------|---------|
 | `apps/docs` | Full documentation covering installation, configuration, and production deployment |
-| `apps/demo-app` | Working demonstration of RunicRPC capabilities |
+| `apps/demo-app` | Working demonstration of runicRPC capabilities |
 
 ---
 
@@ -128,9 +128,9 @@ runic-rpc/
 ### Basic Integration
 
 ```typescript
-import { RunicRPC } from '@runic-rpc/sdk';
+import { runicRPC } from '@runic-rpc/sdk';
 
-const rpc = RunicRPC.create({
+const rpc = runicRPC.create({
   providers: {
     helius: { apiKey: process.env.HELIUS_API_KEY },
     alchemy: { apiKey: process.env.ALCHEMY_API_KEY }
@@ -153,7 +153,7 @@ const subscriptionId = await rpc.onAccountChange(
 ### Configuration
 
 ```typescript
-const rpc = RunicRPC.create({
+const rpc = runicRPC.create({
   // Provider configuration
   providers: {
     helius: { apiKey: 'your-key' },
@@ -227,7 +227,7 @@ Comprehensive documentation is available in the [docs](./apps/docs) directory:
 
 ## Access
 
-RunicRPC is available for integration. For SDK access and API credentials, refer to the documentation or open an issue on this repository.
+runicRPC is available for integration. For SDK access and API credentials, refer to the documentation or open an issue on this repository.
 
 ---
 
@@ -235,7 +235,7 @@ RunicRPC is available for integration. For SDK access and API credentials, refer
 
 MIT License. See [LICENSE](./LICENSE) for details.
 
-The core RunicRPC engine is closed-source. This repository provides public documentation and demonstration code under the MIT license to ensure transparency and ease of integration.
+The core runicRPC engine is closed-source. This repository provides public documentation and demonstration code under the MIT license to ensure transparency and ease of integration.
 
 ---
 
@@ -247,6 +247,6 @@ For security vulnerabilities, please follow responsible disclosure. See [SECURIT
 
 ## Status
 
-RunicRPC is production-ready and actively maintained. The system is designed as long-term Solana infrastructure, built for reliability at scale.
+runicRPC is production-ready and actively maintained. The system is designed as long-term Solana infrastructure, built for reliability at scale.
 
 For inquiries, open an issue on this repository.
